@@ -18,7 +18,8 @@ library(ggplot2)
 storms %>%
   count(year) %>%
   ggplot()+
-  geom_point(aes(x = year, y = n))
+  geom_point(aes(x = year, y = n)) +
+  geom_line(mapping = aes(x = year, y = n))
 ```
 
 You can add options to executable code like this
